@@ -18,7 +18,6 @@ module.exports = function(input) {
     isNth = !isNth;
   }
 
-  console.log(total);
   return total % 10 == 0;
 }
 
