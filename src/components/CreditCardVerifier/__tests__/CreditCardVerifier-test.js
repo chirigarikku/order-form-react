@@ -36,7 +36,8 @@ describe('CreditCardVerifier component', function() {
   describe('validation', function() {
     it('should hide if invalid', function() {
       RenderedComponent = Render('mastercard', '0123123123123123');
-      expect(function() { TestUtils.findRenderedDOMComponentWithTag(RenderedComponent, 'div') }).toThrow();
+      var div = TestUtils.findRenderedDOMComponentWithTag(RenderedComponent, 'div');
+      expect(div.getDOMNode().textContent).toBe('?');
     });
     
     it('should hide if valid', function() {
