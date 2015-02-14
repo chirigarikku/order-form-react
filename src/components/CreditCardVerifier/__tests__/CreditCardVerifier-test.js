@@ -20,16 +20,16 @@ describe('CreditCardVerifier component', function() {
   });
   
   describe('validate this.props.card', function() {
-    beforeEach(function() { spyOn(console, 'warning'); });
+    beforeEach(function() { spyOn(console, 'warn'); });
     
     it('should throw a warning if the card props is not american-express, mastercard, or visa', function() {
       try{ Render('asdasd', 'adasd'); } catch(e){}
-      expect(console.warning).toHaveBeenCalled();
+      expect(console.warn).toHaveBeenCalled();
     });
     
     it('should not throw a warning if the card is american-express, mastercard, or visa', function() {
       Render('mastercard', '12345');
-      expect(console.warning).not.toHaveBeenCalled();
+      expect(console.warn).not.toHaveBeenCalled();
     });
   });
     
