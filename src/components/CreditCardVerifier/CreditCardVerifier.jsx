@@ -14,7 +14,7 @@ var CreditCardVerifier = React.createClass({
      */
     value: React.PropTypes.oneOfType([
       React.PropTypes.string,
-      React.PropTYpes.number
+      React.PropTypes.number
     ]).isRequired,
     
     /**
