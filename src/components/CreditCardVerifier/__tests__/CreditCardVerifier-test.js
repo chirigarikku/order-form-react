@@ -14,6 +14,7 @@ describe('CreditCardVerifier component', function() {
       return TestUtils.renderIntoDocument(
         <Component value={value} card={card}>
           <div>Yolocard</div>
+          <div>?</div>
         </Component>
       );
     }
