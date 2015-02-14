@@ -40,7 +40,7 @@ var CreditCardVerifier = React.createClass({
       <span>
         {Children.map(nodes, function(Child, i) {
           return Child !== undefined && ( (valid && i == 0) || (!valid && i == 1) )
-            ? <Child />
+            ? Child
             : ''
         })}
       </span>
