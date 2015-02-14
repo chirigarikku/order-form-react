@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
+var Children = React.Children;
 
 var validate = require('./algorithm');
 
@@ -8,22 +9,25 @@ var Luhn = React.createClass({
     /**
      * Input to check against Luhn
      */
-    input: React.PropTypes.string.isRequired
+    input: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number
+    ]).isRequired
   },
 
   render: function () {
     var children = this.props.children;
-    var isArray = Array.isArray(children);
-
-    var success = isArray ? <children[0] /> : {children};
-    var error = isArray ? <children[1] /> : '';
+    var valid = validate(this.props.input);
 
     return (
-      <span {input, ...this.props}>
-        { validate(this.props.input)
-          ? success
-          : error
-        }
+      <span>
+        {Children.map(children, function(Child, i) {
+          return (
+            Child !== undefined && ( (i == 0 && valid) || ( i == 1 && !valid ) )
+              ? Child
+              : ''
+          );
+        })}
       </span>
     );
   }
