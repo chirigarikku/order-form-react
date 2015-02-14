@@ -26,7 +26,7 @@ describe('american-express card verifier', function() {
       expect(validator('371231231231235')).toBe(true);
     });
     
-    it('should fail when second number is not 4 or 7, function() {
+    it('should fail when second number is not 4 or 7', function() {
       expect(validator('351231231231231').toBe(false);
     });
     
