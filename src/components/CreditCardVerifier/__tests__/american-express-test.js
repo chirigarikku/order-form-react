@@ -27,11 +27,11 @@ describe('american-express card verifier', function() {
     });
     
     it('should fail when second number is not 4 or 7', function() {
-      expect(validator('351231231231231').toBe(false);
+      expect(validator('351231231231231')).toBe(false);
     });
     
     it('should fail when second number is 3', function() {
-      expect(validator('331231231231231').toBe(false);
+      expect(validator('331231231231231')).toBe(false);
     });
   });
   
