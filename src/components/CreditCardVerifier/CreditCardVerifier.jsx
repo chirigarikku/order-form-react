@@ -26,7 +26,7 @@ var CreditCardVerifier = React.createClass({
       
       if ( validCards.indexOf(value) == -1 ) {
         var err = 'Invalid card option. Accepted are ' + validCards.join(', ');
-        throw new Error(err);
+        return new Error(err);
       }
     }
   },
