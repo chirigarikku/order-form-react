@@ -12,7 +12,8 @@ describe('american-express card verifier', function() {
     });
   
     it('should fail when length is not exactly 15', function() {
-      expect(validator('34123123123122')).toBe(true);
+      expect(validator('34123123123122')).toBe(false);
+      expect(validator('3412312312312256')).toBe(false);
     });
     
     it('should fail when length is 5', function() {
