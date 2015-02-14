@@ -1,5 +1,5 @@
-var START = 3;
-var SECOND = [4, 7];
+var START = '3';
+var SECOND = ['4', '7'];
 var LENGTH = 15;
 
 module.exports = function(input) {
