@@ -1,4 +1,4 @@
-var src = '../CreditCardVerifier';
+var src = '../CreditCardVerifier.jsx';
 jest.dontMock(src);
 jest.dontMock('../american-express');
 jest.dontMock('../mastercard');
