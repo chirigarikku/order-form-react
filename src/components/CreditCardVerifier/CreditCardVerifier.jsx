@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
+var Children = React.Children;
 
 var validators = {
   'american-express': require('./american-express'),
@@ -33,10 +34,15 @@ var CreditCardVerifier = React.createClass({
   
   render: function() {
     var valid = validators[this.props.card](this.props.value);
+    var nodes = this.props.children;
     
     return (
       <span>
-        { valid ? this.props.children : '' }
+        {Children.map(nodes, function(Child, i) {
+          return Child !== undefined && ( (valid && i == 0) || (!valid && i == 1) )
+            ? <Child />
+            : ''
+        })}
       </span>
     );
   },
