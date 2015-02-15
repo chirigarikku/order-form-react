@@ -5,3 +5,8 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 A take on [rstacruz/frontend-exercises](github.com/rstacruz/frontend-exercises), implemented in ReactJS.
+
+Please do not refer to this repository for ideas on Best Practices™.
+
+- **I suck on Unit Tests**. I have never tested anything unlike this project.
+- **I am a sucker**. I just suck.
