@@ -14,7 +14,9 @@ describe('Identifier component', function() {
     Component = require(src);
     Render = function(value, d) {
       return TestUtils.renderIntoDocument(
-        <Component value={value} defaultValue={d} />
+        <Component value={value}>
+          {d}
+        </Component>
       );
     }
   });
@@ -39,7 +41,7 @@ describe('Identifier component', function() {
   });
 
   it('should show `?` if unidentified', function() {
-    RenderedComponent = Render('1');
+    RenderedComponent = Render('1', '?');
     var span = TestUtils.findRenderedDOMComponentWithTag(RenderedComponent, 'span');
     expect(span.getDOMNode().textContent).toBe('?');
   });

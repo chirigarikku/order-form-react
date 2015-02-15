@@ -31,13 +31,14 @@ var CreditCardVerifier = React.createClass({
   },
   
   render: function() {
+    var {value, ...other} = this.props;
     var valid = this._validators[this.props.card](this.props.value);
     var nodes = this.props.children;
 
     console.log(valid);
     
     return (
-      <span>
+      <span {...other}>
         {Children.map(nodes, function(Child, i) {
           return Child !== undefined && ( (valid && i == 0) || (!valid && i == 1) )
             ? Child

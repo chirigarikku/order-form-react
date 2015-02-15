@@ -14,23 +14,15 @@ var Identifier = React.createClass({
     value: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.number
-    ]),
-
-    /**
-     * Default value if all identification fails
-     * @type {Mixed(String|Number)}
-     */
-    defaultValue: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
     ])
   },
 
   render: function() {
-    var identification = this._identify(this.props.value, '?');
+    var {value, ...other} = this.props;
+    var identification = this._identify(this.props.value, this.props.children);
 
     return (
-      <span>{identification}</span>
+      <span {...other}>{identification}</span>
     );
   }
 });

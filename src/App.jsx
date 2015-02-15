@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react/addons');
 
-var CreditCardVerifier = require('./components/CreditCardVerifier/CreditCardVerifier');
+var CreditCardIdentifier = require('./components/CreditCard/Identifier');
 var Luhn = require('./components/Luhn/Luhn');
 
 var App = React.createClass({
@@ -17,31 +17,27 @@ var App = React.createClass({
 
     return (
       <div style={{ width: 500, marginLeft: 'auto', marginRight: 'auto' }}>
-        {bank_no}
-        <div className="input-group">
-          <input type="text" className="form-control" valueLink={this.linkState('bank_no')} />
-          <span className="input-group-addon">
-            <CreditCardVerifier value={bank_no} card="american-express">
-              <span>American Express</span>
-              <span>?</span>
-            </CreditCardVerifier>
+        <div className="form-group">
+          <label> Bank Account </label>
+          <div className="input-group">
+            <input type="text" className="form-control" valueLink={this.linkState('bank_no')} />
+            <span className="input-group-addon">
+              <CreditCardIdentifier value={bank_no}>
+                <span className="glyphicon glyphicon-question-sign" />
+              </CreditCardIdentifier>
 
-            <CreditCardVerifier value={bank_no} card="mastercard">
-              <span>Mastercard</span>
-              <span>?</span>
-            </CreditCardVerifier>
-
-            <CreditCardVerifier value={bank_no} card="visa">
-              <span>Visa</span>
-              <span>?</span>
-            </CreditCardVerifier>
-
-            <Luhn input={bank_no}>
-              <span style={{ color: 'green' }} className="glyphicon glyphicon-check" />
-              <span style={{ color: 'red' }} className="glyphicon glyphicon-remove" />
-            </Luhn>
-          </span>
+              { !! bank_no.length
+                ? <Luhn input={bank_no} style={{ marginLeft: 5 }}>
+                    <span style={{ color: 'green' }} className="glyphicon glyphicon-ok-sign" />
+                    <span style={{ color: 'red' }} className="glyphicon glyphicon-remove-sign" />
+                  </Luhn>
+                : ''
+              }
+            </span>
+          </div>
         </div>
+
+        <button type="button" className="btn btn-success">Submit</button>
       </div>
     );
   }

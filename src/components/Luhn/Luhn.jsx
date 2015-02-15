@@ -16,11 +16,12 @@ var Luhn = React.createClass({
   },
 
   render: function () {
+    var {value, ...other} = this.props;
     var children = this.props.children;
     var valid = validate(this.props.input);
 
     return (
-      <span>
+      <span {...other}>
         {Children.map(children, function(Child, i) {
           return (
             Child !== undefined && ( (i == 0 && valid) || ( i == 1 && !valid ) )
