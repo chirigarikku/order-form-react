@@ -2,13 +2,11 @@
 var React = require('react');
 var Children = React.Children;
 
-var validators = {
-  'american-express': require('./american-express'),
-  'mastercard': require('./mastercard'),
-  'visa': require('./visa')
-};
+var ValidatorsMixin = require('./ValidatorsMixin');
 
 var CreditCardVerifier = React.createClass({
+  mixins: [ValidatorsMixin],
+
   propTypes: {
     /**
      * Value to be verified
@@ -33,8 +31,10 @@ var CreditCardVerifier = React.createClass({
   },
   
   render: function() {
-    var valid = validators[this.props.card](this.props.value);
+    var valid = this._validators[this.props.card](this.props.value);
     var nodes = this.props.children;
+
+    console.log(valid);
     
     return (
       <span>

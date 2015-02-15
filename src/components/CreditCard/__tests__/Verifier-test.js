@@ -1,8 +1,10 @@
-var src = '../CreditCardVerifier.jsx';
+var src = '../Verifier.jsx';
+
 jest.dontMock(src);
-jest.dontMock('../american-express');
-jest.dontMock('../mastercard');
-jest.dontMock('../visa');
+jest.dontMock('../ValidatorsMixin');
+jest.dontMock('../validators/american-express');
+jest.dontMock('../validators/mastercard');
+jest.dontMock('../validators/visa');
 
 describe('CreditCardVerifier component', function() {
   var Component, RenderedComponent, React, TestUtils, Render;
@@ -35,14 +37,14 @@ describe('CreditCardVerifier component', function() {
   });
     
   describe('validation', function() {
-    it('should hide if invalid', function() {
+    it('should hide the first element if invalid', function() {
       RenderedComponent = Render('mastercard', '0123123123123123');
       var div = TestUtils.findRenderedDOMComponentWithTag(RenderedComponent, 'div');
       expect(div.getDOMNode().textContent).toBe('?');
     });
     
-    it('should hide if valid', function() {
-      RenderedComponent = Render('mastercard', '5123123123123123');
+    it('should hide the second element if valid', function() {
+      RenderedComponent = Render('visa', '412312312312323');
       var div = TestUtils.findRenderedDOMComponentWithTag(RenderedComponent, 'div');
       expect(div.getDOMNode().textContent).toBe('Yolocard');
     });
