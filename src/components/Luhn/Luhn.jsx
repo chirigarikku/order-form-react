@@ -9,7 +9,7 @@ var Luhn = React.createClass({
     /**
      * Input to check against Luhn
      */
-    input: React.PropTypes.oneOfType([
+    value: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.number
     ]).isRequired
@@ -18,7 +18,7 @@ var Luhn = React.createClass({
   render: function () {
     var {value, ...other} = this.props;
     var children = this.props.children;
-    var valid = validate(this.props.input);
+    var valid = validate(value);
 
     return (
       <span {...other}>

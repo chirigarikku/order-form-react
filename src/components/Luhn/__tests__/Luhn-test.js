@@ -10,7 +10,7 @@ describe('Luhn component', function() {
     Component = require(src);
     Render = function(i) {
       return TestUtils.renderIntoDocument(
-        <Component input={i}>
+        <Component value={i}>
           <div>Success</div>
           <div>Error</div>
         </Component>

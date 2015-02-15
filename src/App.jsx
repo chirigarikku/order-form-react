@@ -27,7 +27,7 @@ var App = React.createClass({
               </CreditCardIdentifier>
 
               { !! bank_no.length
-                ? <Luhn input={bank_no} style={{ marginLeft: 5 }}>
+                ? <Luhn value={bank_no} style={{ marginLeft: 5 }}>
                     <span style={{ color: 'green' }} className="glyphicon glyphicon-ok-sign" />
                     <span style={{ color: 'red' }} className="glyphicon glyphicon-remove-sign" />
                   </Luhn>
