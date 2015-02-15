@@ -9,6 +9,10 @@ Please do not refer to this repository for ideas on Best Practices™.
 - **I suck on Unit Tests**. I have never tested anything unlike this project.
 - **I am a sucker**. I just suck.
 
+## Demo
+
+A [github page](https://srph.github.io/frontend-exercises-order-form-react) is available.
+
 ## Building
 
 The preview is available, and I don't see the need. But if you insist!
@@ -43,3 +47,14 @@ $ npm run build # just build the scripts
 $ npm run watch # build and watch for file changes
 $ npm test # run the test (jest)
 ```
+## Acknowledgement
+
+- [facebook/react(ReactJS)](https://github.com/facebook/react)
+- [rstacruz/frontend-exercises](https://github.com/rstacruz/frontend-exercises/tree/master/order-form)
+- [TWBS 3](https://github.com/twbs/bootstrap)
+
+**frontend-exercises-order-form-react** © 2014+, Kier Borromeo (srph).
+
+> [srph.github.io](http://srph.github.io) &nbsp;&middot;&nbsp;
+> GitHub [@srph](https://github.com/srph) &nbsp;&middot;&nbsp;
+> Twitter [@_srph](https://twitter.com/_srph)
