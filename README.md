@@ -28,13 +28,13 @@ The preview is available, and I don't see the need. But if you insist!
 
 - Clone to your local machine
 
-```
+```bash
 $ git clone https://github.com/srph/frontend-exercises-order-form-react
 ```
 
 - Install dependencies
 
-```
+```bash
 # go to project root folder
 $ cd frontend-exercises-order-form-react
 
@@ -43,7 +43,7 @@ $ npm install && bower install
 
 ### Automation
 
-```
+```bash
 $ npm run build # just build the scripts
 $ npm run watch # build and watch for file changes
 $ npm test # run the test (jest)
