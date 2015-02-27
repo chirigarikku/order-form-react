@@ -9,6 +9,8 @@ Please do not refer to this repository for ideas on Best Practices™.
 - **I suck on Unit Tests**. I have never tested anything unlike this project.
 - **I am a sucker**. I just suck.
 
+The unit tests were also poorly written as discussed in [a commit discussion](https://github.com/srph/frontend-exercises-order-form-react/commit/cc65e22df5857bd5aad717ef1afe89a24f2b51da).
+
 ## Demo
 
 A [github page](https://srph.github.io/frontend-exercises-order-form-react) is available.
