@@ -7,9 +7,8 @@ A take on [rstacruz/frontend-exercises](https://github.com/rstacruz/frontend-exe
 Please do not refer to this repository for ideas on Best Practices™.
 
 - **I suck on Unit Tests**. I have never tested anything unlike this project.
+-  The unit tests were poorly written as discussed in [a commit discussion](https://github.com/srph/frontend-exercises-order-form-react/commit/cc65e22df5857bd5aad717ef1afe89a24f2b51da).
 - **I am a sucker**. I just suck.
-
-The unit tests were also poorly written as discussed in [a commit discussion](https://github.com/srph/frontend-exercises-order-form-react/commit/cc65e22df5857bd5aad717ef1afe89a24f2b51da).
 
 ## Demo
 
